@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.navbar{
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  width: 130px;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu a{
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover{
+  color: #d71920;
+}
+
+.principal{
+  min-height: 100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/inicio.webp');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.inicio{
+  max-width: 750px;
+  padding: 0 8%;
+}
+
+.inicio h1{
+  font-size: 68px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.inicio p{
+  font-size: 22px;
+  line-height: 1.6;
+  color: #d1d1d1;
+  margin-bottom: 40px;
+}
+
+.btn{
+  display: inline-block;
+  background-color: #d71920;
+  color: white;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  background-color: #a81218;
+  transform: translateY(-3px);
+}
+
+/*SEÇÕES*/
+.section{
+  padding: 110px 8%;
+}
+
+.section h2{
+  font-size: 42px;
+  color: #d71920;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.texto-central{
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 30px;
+}
+
+.card{
+  background-color: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+}
+
+.icon{
+  font-size: 42px;
+  color: #d71920;
+  margin-bottom: 20px;
+}
+
+.card h3{
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.card p{
+  color: #555;
+  line-height: 1.7;
+}
+
+.lista{
+  max-width: 850px;
+  margin: auto;
+}
+
+.item{
+  background-color: white;
+  padding: 22px 25px;
+  margin-bottom: 20px;
+  border-left: 6px solid #d71920;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+
+  font-size: 18px;
+  color: #333;
+
+  transition: 0.3s;
+}
+
+.item:hover{
+  transform: translateX(5px);
+}
+
+.item i{
+  color: #d71920;
+  margin-right: 12px;
+}
+
+/*QUIZ*/
+.center{
+  min-height: 50vh;
+  text-align: center;
+}
+
+/*ACADÊMICOS*/
+#academicos{
+  padding: 110px 8%;
+}
+
+#academicos h2{
+  text-align: center;
+  color: #d71920;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.academicos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.academicos a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.academicos a:hover{
+  color: #d71920;
+  transform: scale(1.05);
+}
+
+/*RESPONSIVO*/
+@media(max-width: 900px){
+
+  .navbar{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inicio{
+    text-align: center;
+  }
+
+  .inicio h1{
+    font-size: 48px;
+  }
+
+  .inicio p{
+    font-size: 18px;
+  }
+
+  .section h2{
+    font-size: 34px;
+  }
+
+}
+
+@media(max-width: 600px){
+
+  .inicio h1{
+    font-size: 38px;
+  }
+
+  .menu{
+    gap: 15px;
+  }
+
+  .menu a{
+    font-size: 14px;
+  }
+
+  .section{
+    padding: 90px 6%;
+  }
+
+  .item{
+    font-size: 16px;
+  }
+
+}
